@@ -1,0 +1,18 @@
+@use './mixin' as *;
+
+nav{
+    height: 5vh;
+
+    // mushaobs 480px mde mere gadadis Shemdegze
+    @include respond-to(sm){
+        height: 5vh;
+        font-size: 16px;
+
+    };
+    ul{
+        li{
+            display: inline;
+
+        }
+    }
+}

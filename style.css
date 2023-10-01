@@ -1,0 +1,18 @@
+nav {
+  height: 5vh;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  nav {
+    height: 5vh;
+    font-size: 16px;
+  }
+}
+nav ul li {
+  display: inline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}/*# sourceMappingURL=style.css.map */
