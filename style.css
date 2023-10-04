@@ -48,6 +48,58 @@ nav ul li {
   color: white;
 }
 
+.transactionView {
+  position: absolute;
+  background-color: #f5b790;
+  left: 5%;
+  top: 10%;
+  padding: 0.5em;
+  width: 90%;
+  height: 40%;
+  display: none;
+  gap: 0vh;
+  grid-template-columns: repeat(1fr, 3);
+  grid-template-rows: repeat(1fr, 5);
+}
+.transactionView div {
+  max-height: 5vh;
+  height: auto;
+  border-bottom: 1px solid #444444;
+  grid-column: 1/3;
+  grid-row: 1;
+}
+.transactionView ul {
+  grid-column: 1/3;
+  grid-row: 2/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.transactionView ul li {
+  list-style: none;
+  line-height: 2vh;
+}
+.transactionView ul li p {
+  background-color: #444444;
+  color: #ffffff;
+  padding: 0.2em;
+  width: 80%;
+}
+.transactionView button {
+  height: 3vh;
+  width: 80%;
+  border: none;
+  outline: none;
+  border-radius: 0.5em;
+  background-color: #444444;
+  color: #ffffff;
+}
+.transactionView button:nth-child(odd):hover {
+  background-color: #32BF00;
+}
+.transactionView button:nth-child(even):hover {
+  background-color: #FF7F13;
+}
+
 * {
   margin: 0;
   padding: 0;
