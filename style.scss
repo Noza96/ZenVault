@@ -1,7 +1,32 @@
 @use './style/breakpoints';
+@use './style/components';
+@use './style/color' as cl;
+
+
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: .5vw;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: cl.$tertiary; 
+  }

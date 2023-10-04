@@ -1,0 +1,57 @@
+@use './color' as cl;
+@use './mixin' as *;
+
+main{
+    display: grid;
+    grid-template-columns: repeat(1fr, 12);
+    grid-template-rows: repeat(1fr, 12);
+    height: 100%;
+    gap: 2rem;
+}
+nav{
+    background-color: cl.$secondary;
+    border-bottom: 1px solid black;
+    grid-column: 1 / 12;
+    grid-row: 1/3;
+    text-align: right;
+    height: auto;
+    ul{
+        margin-top: .5vh;
+        li{
+            display: inline;
+            padding: .3em;
+            cursor: pointer;
+        }
+    }
+}
+.managmentSection{
+    background-color: cl.$primary;
+    grid-column: 2 / 11;
+    grid-row: 3/12;
+    height: 80vh;
+    overflow-y: scroll;
+    // color: cl.$light-text;
+    div{
+        border-bottom: 1px solid cl.$accent;
+        padding: .5em;
+        text-align: center;
+        p{
+        }
+    }
+    ul{
+        li{
+            @include respond-to(xs){
+            };
+            padding: .5em;
+            height: auto;
+            cursor: pointer;
+            border-bottom: 1px solid cl.$accent;
+        }
+        li:hover{
+            background-color: cl.$selection-color;
+            p, h3{
+                color: white;
+            }
+        }        
+    }
+}
