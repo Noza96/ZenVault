@@ -46,12 +46,28 @@ nav{
             height: auto;
             cursor: pointer;
             border-bottom: 1px solid cl.$accent;
+            button{
+                padding: .5em;
+                width: 49%;
+                border: none;
+                outline: none;
+                border-radius: .4em;
+                background-color: cl.$accent;
+                color: cl.$light-text;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: cl.$selection-color;
+            }
         }
         li:hover{
             background-color: cl.$selection-color;
             p, h3{
                 color: white;
             }
+        }
+        .doNotHover:hover{
+            background-color: cl.$primary;
         }        
     }
 }
