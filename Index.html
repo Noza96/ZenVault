@@ -20,21 +20,40 @@
         <section class="managmentSection" id="managmentSection">
                 <div class="currentNet">
                     <p>Total Balance:</p>
-                    <h2>142.50 GEL</h2>
+                    <h2 id="totalLeft"></h2>
                 </div>
                 <ul id="transactionItems">
                     <li class="doNotHover">
-                        <button>Add</button>
-                        <button>remove</button>
+                        <button onclick="openNewTransaction()">Add</button>
+                        <button onclick="clearData()">remove</button>
                     </li>
                 </ul>
         </section>
 
     </main>
+
+    <section class="addTransaction" id="addTransaction">
+        <ul>
+            <li>Where: <br>
+                <input type="text" id="addTransactionVendor">   
+            </li>
+            <li>Amount: <br>
+                <input type="number" id="addTransactionPrice">
+            </li>
+            <li>Date: <br>
+                <input type="date" id="addTransactionDate">
+            </li>
+            
+        </ul>
+        <div>
+            <button onclick="closeNewTransaction()">Cancel</button>
+            <button onclick="storeTransactionData()">Submit</button>
+        </div>
+    </section>
     
-<section class="transactionView">
+<section class="transactionView" id="transactionView">
     <div>
-        <h3>Transaction: #20</h3>
+        <h3 id="transactionID">Transaction: #20</h3>
         <p>Amount: 20 GEL</p>
     </div>
     <ul>
@@ -43,8 +62,8 @@
         <li>Date: <br><p>23/10/1996</p></li>
         <li>Left: <br><p>1950 Gel</p></li>
     </ul>
-    <button>Submit</button>
-    <button>Cancel</button>
+        <!-- <button>Submit</button>
+        <button>Cancel</button> -->
 </section>
 
 

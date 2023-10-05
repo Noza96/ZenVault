@@ -72,48 +72,64 @@ nav ul li {
   padding: 0.5em;
   width: 90%;
   height: 40%;
-  display: none;
+  display: grid;
   gap: 0vh;
   grid-template-columns: repeat(1fr, 3);
-  grid-template-rows: repeat(1fr, 5);
+  grid-template-rows: repeat(1fr, 3);
 }
 .transactionView div {
-  max-height: 5vh;
-  height: auto;
-  border-bottom: 1px solid #444444;
-  grid-column: 1/3;
+  grid-column: 1/4;
   grid-row: 1;
+  height: auto;
+  max-height: 30%;
 }
 .transactionView ul {
-  grid-column: 1/3;
-  grid-row: 2/4;
+  grid-column: 1/4;
+  grid-row: 2/3;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .transactionView ul li {
-  list-style: none;
-  line-height: 2vh;
+  list-style-type: none;
+  background-color: #444444;
 }
 .transactionView ul li p {
+  background-color: white;
+  width: 6vw;
+}
+
+.addTransaction {
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 40%;
+  width: 40%;
+  left: 30%;
+  top: 20%;
+}
+.addTransaction ul {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  padding: 1em;
+}
+.addTransaction input {
   background-color: #444444;
   color: #ffffff;
   padding: 0.2em;
   width: 80%;
-}
-.transactionView button {
-  height: 3vh;
-  width: 80%;
-  border: none;
   outline: none;
-  border-radius: 0.5em;
-  background-color: #444444;
-  color: #ffffff;
+  border: none;
+  border-radius: 0.2em;
+  padding: 0.3em;
 }
-.transactionView button:nth-child(odd):hover {
-  background-color: #32BF00;
+.addTransaction div {
+  grid-column: 1/4;
+  grid-row: 3;
+  border: none;
 }
-.transactionView button:nth-child(even):hover {
-  background-color: #FF7F13;
+.addTransaction div button {
+  display: inline;
+  width: 49%;
 }
 
 * {

@@ -80,47 +80,64 @@ nav{
     padding: .5em;
     width: 90%;
     height: 40%;
-    display: none;
+    display: grid;
     gap: 0vh;
     grid-template-columns: repeat(1fr, 3);
-    grid-template-rows: repeat(1fr, 5);
+    grid-template-rows: repeat(1fr, 3);
     div{
-        // background-color: red;
-        max-height: 5vh;
-        height: auto;
-        border-bottom: 1px solid cl.$accent;
-        grid-column: 1/3;
+        grid-column: 1/4;
         grid-row: 1;
-    }   
+        height: auto;
+        max-height: 30%;
+    }
     ul{
-        grid-column: 1/3;
-        grid-row: 2/4;
+        grid-column: 1/4;
+        grid-row: 2/3;
         display: grid;
         grid-template-columns: 1fr 1fr;
         li{
-            list-style: none;
-            line-height: 2vh;
+            list-style-type: none;
+            background-color: cl.$accent;
             p{
-                background-color: cl.$accent;
-                color: cl.$light-text;
-                padding: .2em;
-                width: 80%;
+                background-color: white;
+                width: 6vw;
             }
         }
     }
-    button{
-        height: 3vh;
-        width: 80%;
-        border: none;
-        outline: none;
-        border-radius: .5em;
+}
+
+.addTransaction{
+    display: none;
+    // display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 40%;
+    width: 40%;
+    left: 30%;
+    top: 20%;
+    ul{
+        grid-column: 1/4;
+        grid-row: 1/2;
+        // background-color: red;
+        padding: 1em;
+    }
+    input{
         background-color: cl.$accent;
         color: cl.$light-text;
+        padding: .2em;
+        width: 80%;
+        outline: none;
+        border: none;
+        border-radius: .2em;
+        padding: .3em;
     }
-    button:nth-child(odd):hover{
-        background-color: cl.$success;
-    }
-    button:nth-child(even):hover{
-        background-color: cl.$warning;
+    div{
+        grid-column: 1/4;
+        grid-row: 3;
+        border: none;
+        button{
+            display: inline;
+            width: 49%;
+        }
     }
 }
