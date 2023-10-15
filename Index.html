@@ -33,22 +33,28 @@
     </main>
 
     <section class="addTransaction" id="addTransaction">
+
         <ul>
+
             <li>Where: <br>
-                <input type="text" id="addTransactionVendor">   
+                <input type="text" id="addTransactionVendorInput">   
             </li>
+            
             <li>Amount: <br>
                 <input type="number" id="addTransactionPrice">  
             </li>
+
             <li>Date: <br>
                 <input type="date" id="addTransactionDate">
             </li>
+
             <li>Type: <br>
                 <select name="type" id="addTransactionType">
                     <option value="გასავალი" dafault>გასავალი</option>
                     <option value="შემოსავალი">შემოსავალი</option>
                 </select>
             </li>
+
             <li>Currency: <br>
                 <select name="type" id="addTransactionCurrency">
                     <option value="Gel" dafault>ლარი</option>
@@ -58,10 +64,12 @@
             </li>
             
         </ul>
+
         <div>
             <button onclick="closeNewTransaction()">Cancel</button>
             <button onclick="storeTransactionData()">Submit</button>
         </div>
+
     </section>
     
 <section class="transactionWrapper" id="transactionWrapper">

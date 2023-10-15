@@ -134,36 +134,72 @@ nav ul li {
 
 .addTransaction {
   display: none;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  height: 40%;
-  width: 40%;
-  left: 30%;
-  top: 20%;
+  position: absolute;
+  background-color: #f5b790;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  padding: 20px;
 }
 .addTransaction ul {
-  grid-column: 1/4;
-  grid-row: 1/2;
-  padding: 1em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.addTransaction input {
-  background-color: #444444;
-  color: #ffffff;
-  padding: 0.2em;
-  width: 80%;
+.addTransaction ul li {
+  margin-bottom: 20px;
+  width: calc(50% - 10px);
+}
+.addTransaction ul li label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+}
+.addTransaction ul li input[type=text],
+.addTransaction ul li input[type=number],
+.addTransaction ul li input[type=date],
+.addTransaction ul li select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+.addTransaction ul li input[type=text]:focus,
+.addTransaction ul li input[type=number]:focus,
+.addTransaction ul li input[type=date]:focus,
+.addTransaction ul li select:focus {
   outline: none;
-  border: none;
-  border-radius: 0.2em;
-  padding: 0.3em;
+  border-color: #007bff;
+}
+.addTransaction ul select {
+  cursor: pointer;
 }
 .addTransaction div {
-  grid-column: 1/4;
-  grid-row: 3;
-  border: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 .addTransaction div button {
-  display: inline;
-  width: 49%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.addTransaction div button:first-child {
+  background-color: #ccc;
+  color: #333;
+}
+.addTransaction div button:last-child {
+  background-color: #007bff;
+  color: #fff;
 }
 
 * {

@@ -1,5 +1,7 @@
 @use './color' as cl;
 @use './mixin' as *;
+@use './transaction';
+
 
 main{
     display: grid;
@@ -71,6 +73,7 @@ nav{
         }        
     }
 }
+
 
 .transactionWrapper{
     position: absolute;
@@ -144,39 +147,77 @@ nav{
     }
    }
 }
-
-.addTransaction{
+.addTransaction {
     display: none;
-    // display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 40%;
-    width: 40%;
-    left: 30%;
-    top: 20%;
-    ul{
-        grid-column: 1/4;
-        grid-row: 1/2;
-        // background-color: red;
-        padding: 1em;
-    }
-    input{
-        background-color: cl.$accent;
-        color: cl.$light-text;
-        padding: .2em;
-        width: 80%;
-        outline: none;
-        border: none;
-        border-radius: .2em;
-        padding: .3em;
-    }
-    div{
-        grid-column: 1/4;
-        grid-row: 3;
-        border: none;
-        button{
-            display: inline;
-            width: 49%;
+    position: absolute;
+    background-color: cl.$secondary;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+      li {
+        margin-bottom: 20px;
+        width: calc(50% - 10px); // Adjust the width as needed
+        label {
+          display: block;
+          font-weight: bold;
+          color: #333; // Text color
         }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+          color: #333; // Text color
+          &:focus {
+            outline: none;
+            border-color: #007bff; // Change to your preferred focus color
+          }
+        }
+      }
+      
+      select {
+        cursor: pointer;
+      }
     }
-}
+    
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        
+        &:first-child {
+          background-color: #ccc; // Change to your preferred cancel button color
+          color: #333; // Text color
+        }
+        
+        &:last-child {
+          background-color: #007bff; // Change to your preferred submit button color
+          color: #fff; // Text color
+        }
+      }
+    }
+  }
+  

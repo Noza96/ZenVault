@@ -18,7 +18,7 @@ function clearData() {
 }
 
 function openNewTransaction(){
-    document.getElementById('addTransaction').style.display = "grid"  ;
+    document.getElementById('addTransaction').style.display = "block"  ;
 };
 function closeNewTransaction() {
     document.getElementById('addTransaction').style.display = "none"  ;
@@ -173,3 +173,6 @@ function reply_click(clicked_id){
 // 
 let totalLeft = document.getElementById('totalLeft');
 totalLeft.innerHTML = userData.totalLeft;
+
+
+
