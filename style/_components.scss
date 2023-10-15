@@ -72,38 +72,77 @@ nav{
     }
 }
 
-.transactionView{
+.transactionWrapper{
     position: absolute;
-    background-color: cl.$secondary;
-    left: 5%;
-    top: 10%;
-    padding: .5em;
-    width: 90%;
-    height: 40%;
-    display: grid;
-    gap: 0vh;
-    grid-template-columns: repeat(1fr, 3);
-    grid-template-rows: repeat(1fr, 3);
+    background-color: cl.$color-transparent-2;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    // display: grid;
+    display: none;
+   article{
+    background-color: cl.$tertiary;
+    margin-top: 3%;
+    width: 60%;
+    height: 90%;
+    margin-left: 20%;
     div{
-        grid-column: 1/4;
-        grid-row: 1;
-        height: auto;
-        max-height: 30%;
+        width: 100%;
+        height: 5%;
+        h3{
+            display: inline;
+        }
+        button{
+            float: right;
+            height: 4vh;
+            width: 4vw;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
     }
-    ul{
-        grid-column: 1/4;
-        grid-row: 2/3;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        li{
-            list-style-type: none;
-            background-color: cl.$accent;
+    div:nth-child(even){
+        // margin-top: 10%;
+        // background-color: red;
+        width: 40%;
+        margin-left: 30%;
+        text-align: center;
+        height: 80%;
+        .transactionTypeLabel{
+            font-weight: bold;
+            font-size: 1.5em;
+        }#transactionType{
+            color: cl.$accent;
+        }
+        .amount{
+            color: cl.$warning;
+            font-size: 3em;
+        }
+        .transactionInfo{
+            text-align: left;
+            background-color: cl.$secondary;
+            padding: .5em;
+            border-radius: .5em;
+            label{
+                font-size: .8em;
+                font-weight: 600;
+            }
             p{
-                background-color: white;
-                width: 6vw;
+                margin-left: 1vw;
+                color: cl.$accent;
             }
         }
     }
+    ul{
+        li{
+            list-style-type: none;
+            margin-top: 2vh;
+            // background-color: red;
+        }
+    }
+   }
 }
 
 .addTransaction{

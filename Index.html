@@ -38,10 +38,23 @@
                 <input type="text" id="addTransactionVendor">   
             </li>
             <li>Amount: <br>
-                <input type="number" id="addTransactionPrice">
+                <input type="number" id="addTransactionPrice">  
             </li>
             <li>Date: <br>
                 <input type="date" id="addTransactionDate">
+            </li>
+            <li>Type: <br>
+                <select name="type" id="addTransactionType">
+                    <option value="გასავალი" dafault>გასავალი</option>
+                    <option value="შემოსავალი">შემოსავალი</option>
+                </select>
+            </li>
+            <li>Currency: <br>
+                <select name="type" id="addTransactionCurrency">
+                    <option value="Gel" dafault>ლარი</option>
+                    <option value="Usd">დოლარი</option>
+                    <option value="Eur">ევრო</option>
+                </select>
             </li>
             
         </ul>
@@ -51,19 +64,9 @@
         </div>
     </section>
     
-<section class="transactionView" id="transactionView">
-    <div>
-        <h3 id="transactionID">Transaction: #20</h3>
-        <p>Amount: 20 GEL</p>
-    </div>
-    <ul>
-        <li>Where: <br><p>Steam</p></li>
-        <li>Amount: <br><p>50 Gel</p></li>
-        <li>Date: <br><p>23/10/1996</p></li>
-        <li>Left: <br><p>1950 Gel</p></li>
-    </ul>
-        <!-- <button>Submit</button>
-        <button>Cancel</button> -->
+<section class="transactionWrapper" id="transactionWrapper">
+
+    
 </section>
 
 
